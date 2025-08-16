@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: o;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: #020024;
+    background-image: url("matrixcode.gif");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding-top: 60px
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 50%;                /* Start n the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.8rem 2rem;
+    border-radius: 15px;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: fit-content; /* Shrinks to content size */
+}
+
+.navLinks {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: #01ff01;
+}
+
+.logo img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.5);
+}
+
+body {
+    padding-top: 80px; /* More space for navbar */
+}
+
+@keyframes zoomIn {
+      0% {
+        transform: scale(1); /* Original size */
+      }
+      50% {
+        transform: scale(1.5); /* Scales to 150% of original size */
+      }
+      100%{
+        transform: scale(1);
+      }
+}
+
+@font-face{
+    font-family: "MyCustomFont";
+    src: url("Custom_fonts/PlaywriteMXGuides-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+.big_box{
+    margin: 5px auto;
+    width: 100%;
+    max-width: 95vw;
+    padding: 2px 2px 2px 2px;
+    border-radius: 3opx;
+    background: rgba(0, 0, 0, 0.3);
+}
+.box{
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Transparent white */
+    backdrop-filter: blur(50px);            /* Glass blur effect */
+    -webkit-backdrop-filter: blur(50px);    /* Safari support */
+    border: 1px solid rgba(255, 176, 176, 0.2);
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Floating shadow */
+    transition: transform 0.3s ease;
+}
+.hero{
+    margin: 20px 0px 20px;
+}
+.about{
+    margin: 20px 0px 20px;
+}
+.academics{
+    margin: 20px 0px 20px;
+}
+.projects{
+    margin: 20px 0px 20px;
+}
+.skills{
+    margin: 20px 0px 20px;
+}
+
+
+.box:hover{
+    transform: translateY(3px);
+    
+}
+
+
+@keyframes zoomIn2 {
+      0% {
+        transform: scale(1); /* Original size */
+      }
+      50% {
+        transform: scale(1.05); /* Scales to 150% of original size */
+      }
+      100%{
+        transform: scale(1);
+      }
+
+}
+
+.contact{
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255,0.8);
+    margin: auto;
+    background: rgba(23, 116, 0, 0.5);
+    backdrop-filter: blur(95px);
+    padding: 1.2rem 1.2rem;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    text-align: left;
+    color:#ffffff;
+
+}
+.content a{
+    font-style: normal;
+    text-decoration: none;
+}
+form{
+    max-width:480 px;
+    margin: auto 10px;
+    padding: 1.2rem 2rem;
+    display: inline-block;
+}
+
+form input{
+    text-align: center;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+}
+.content :hover{
+    animation: zoomIn2 0.5 ease-in ;
+}
+
+.academics .card {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 15px 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.academics .card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+    animation: glow 0.5s ease-in-out;
+}
+
+.academics .inst_img img {
+    border-radius: 10px;
+    border: 2px solid #01ff01;
+}
+
+.academics .inst_details h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #01ff01;
+}
+
+.academics .inst_details p {
+    margin: 3px 0;
+    color: #e0e0e0;
+}
+
+.project-info{
+    margin: 20px auto;
+    padding: 1.5rem 2 rem;
+    display: flex;
+    display: inline-block;
+}
+
+.project-info a img{
+    border-radius: 15px;
+    border: 1px solid #01ff01;
+}
+
+.project-info a img:hover{
+    animation: glow 0.5s ease-in-out ;
+    
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Starting glow */
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.8); /* Peak glow */
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Ending glow (back to start) */
+  }
+}
