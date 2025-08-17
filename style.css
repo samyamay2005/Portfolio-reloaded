@@ -247,3 +247,94 @@ form input{
     box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Ending glow (back to start) */
   }
 }
+
+/*Mediafunctions*/
+
+@media (max-width: 1024px) {
+    .navbar {
+        gap: 1rem;
+        padding: 0.6rem 1.2rem;
+    }
+    .navLinks a {
+        font-size: 1rem;
+    }
+    .box {
+        width: 95%;
+        padding: 1rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        position: static; /* no fixed nav bar on tiny screens */
+        transform: none;
+        width: 100%;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 0.5rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .academics .card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .academics .inst_img img {
+        height: 70px;
+    }
+
+    .projects .project-item {
+        margin-bottom: 2rem;
+    }
+
+    .project-info {
+        display: block;
+        text-align: center;
+    }
+
+    form input {
+        width: 90%;
+        max-width: 100%;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .navLinks a {
+        font-size: 0.9rem;
+    }
+
+    .hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .academics .inst_details h3 {
+        font-size: 1rem;
+    }
+}
