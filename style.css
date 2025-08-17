@@ -53,13 +53,21 @@ body{
     color: #01ff01;
 }
 
-.logo img {
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
-
-.logo img:hover {
-    transform: scale(1.5);
+.logo{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.logo:hover {
+    transform: scale(1.1);
 }
 
 body {
@@ -336,5 +344,29 @@ form input{
 
     .academics .inst_details h3 {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navLinks {
+        display: none; /* hide by default */
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .navLinks.show {
+        display: flex; /* show when active */
     }
 }
