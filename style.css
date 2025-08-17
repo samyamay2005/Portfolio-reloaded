@@ -59,7 +59,7 @@ body{
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    
+
 }
 .logo:hover {
     transform: translateY(1px);
@@ -81,26 +81,9 @@ body {
       }
 }
 
-@font-face{
-    font-family: "MyCustomFont";
-    src: url("Custom_fonts/PlaywriteMXGuides-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 
-
-
-.big_box{
-    margin: 5px auto;
-    width: 100%;
-    max-width: 95vw;
-    padding: 2px 2px 2px 2px;
-    border-radius: 3opx;
-    background: rgba(0, 0, 0, 0.3);
-}
-.box{
+.box_big{
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.1); /* Transparent white */
     backdrop-filter: blur(50px);            /* Glass blur effect */
@@ -122,18 +105,19 @@ body {
     margin: 20px 0px 20px;
 }
 .academics{
-    margin: 20px 0px 20px;
+    margin: 60px 0px 20px;
 }
 .projects{
-    margin: 20px 0px 20px;
+    margin: 60px 0px 60px;
 }
 .skills{
-    margin: 20px 0px 20px;
+    margin: 60px 0px 60px;
 }
 
 
-.box:hover{
-    transform: translateY(3px);
+.box_big:hover{
+    animation: glow ;
+    animation: zoomIn2 0.5s ease-in-out;
     
 }
 
@@ -143,7 +127,7 @@ body {
         transform: scale(1); /* Original size */
       }
       50% {
-        transform: scale(1.05); /* Scales to 150% of original size */
+        transform: scale(1.01); /* Scales to 150% of original size */
       }
       100%{
         transform: scale(1);
@@ -186,6 +170,7 @@ form input{
 }
 .content :hover{
     animation: zoomIn2 0.5 ease-in ;
+    animation: glow ;
 }
 
 .academics .card {
@@ -203,7 +188,7 @@ form input{
 .academics .card:hover {
     transform: translateY(-5px);
     background: rgba(255, 255, 255, 0.15);
-    animation: glow 0.5s ease-in-out;
+    animation: glow 0.5s ease-in-out 2;
 }
 
 .academics .inst_img img {
@@ -222,32 +207,45 @@ form input{
     color: #e0e0e0;
 }
 
-.project-info{
-    margin: 20px auto;
-    padding: 1.5rem 2 rem;
+.project-list{
     display: flex;
-    display: inline-block;
+    gap: 20px;
+}
+.project-list .card{
+    flex: 1;
+    display: flexbox;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 15px 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.project-list .card :hover{
+    transform: translateY(1px);
 }
 
-.project-info a img{
+.project-list .card a img{
     border-radius: 15px;
     border: 1px solid #01ff01;
 }
 
-.project-info a img:hover{
+.project-list .card a img:hover{
     animation: glow 0.5s ease-in-out ;
     
 }
 
 @keyframes glow {
   0% {
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Starting glow */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.50); /* Starting glow */
   }
   50% {
-    box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.8); /* Peak glow */
+    box-shadow: 0 0 20px 10px rgba(0, 123, 255, 0.65); /* Peak glow */
   }
   100% {
-    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Ending glow (back to start) */
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.80); /* Ending glow (back to start) */
   }
 }
 
@@ -270,7 +268,7 @@ form input{
 /* Phones */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        display:flex;
         position: static; /* no fixed nav bar on tiny screens */
         transform: none;
         width: 100%;
@@ -279,7 +277,7 @@ form input{
     }
 
     .navLinks {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 0.8rem;
         margin-top: 0.5rem;
@@ -308,15 +306,12 @@ form input{
         margin-bottom: 2rem;
     }
 
-    .project-info {
+    .project-list .card{
         display: block;
         text-align: center;
     }
 
-    form input {
-        width: 90%;
-        max-width: 100%;
-    }
+    
 }
 
 /* Small phones */
@@ -324,7 +319,10 @@ form input{
     body {
         font-size: 0.9rem;
     }
+    .navbar .navlinks a{
+        display: flex;
 
+    }
     .navLinks a {
         font-size: 0.9rem;
     }
