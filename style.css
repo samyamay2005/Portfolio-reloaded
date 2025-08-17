@@ -267,7 +267,12 @@ form input{
 
 /* Phones */
 @media (max-width: 768px) {
+    body{
+        margin: 5px auto;
+        padding: 0;
+    }
     .navbar {
+        margin-top: 0px;
         display:flex;
         position: static; /* no fixed nav bar on tiny screens */
         transform: none;
@@ -305,10 +310,13 @@ form input{
     .projects .project-item {
         margin-bottom: 2rem;
     }
-
+    .project-list{
+        display: grid;
+        
+    }
     .project-list .card{
         display: block;
-        text-align: center;
+        
     }
 
     
