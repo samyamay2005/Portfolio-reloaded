@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: o;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -236,7 +236,7 @@ form input{
 }
 .project-list .card{
     flex: 1;
-    display: flexbox;
+    display: flex;
     align-items: center;
     gap: 1.2rem;
     margin: 15px 0;
