@@ -108,7 +108,12 @@ body{
     transform: scale(1.01);
     box-shadow: 0 0 30px rgba(0,255,255,0.8), 0 0 60px rgba(0,255,255,0.4);
 }
-
+.skills-list a{
+    text-decoration: none;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+    transition: 0.3s;
+}
 /* Glow animations */
 @keyframes neon-glow {
   from {
